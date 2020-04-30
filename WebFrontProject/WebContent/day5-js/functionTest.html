@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		/* 1. 선언적 함수 - 이름이 있는 함수  */
+		function go(a){
+			a++;
+			//alert("hello" + a);
+			return a;
+		}
+		
+		console.log(go(7));
+		
+		/* max(a, b): 숫자 두개를 입력 받아서 그 중에 큰 수를 리턴해주는 함수
+		   sum(arr): 정수 배열 한개를 입력 받아 그 안의 모든 값들을 더해서 결과 콘솔을 출력
+		
+		*/
+		function max(a, b){
+			return a > b ? a : b;
+		}
+		   
+		var score = [10, 20, 30];
+		function sum(arr) {
+			var total = 0;
+			for(var i = 0; i < arr.length; i++){
+				total += arr[i];
+			}
+			console.log(total);
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

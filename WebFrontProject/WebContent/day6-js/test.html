@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="#" onclick="createTextBox();">텍스트 박스 생성</a></li>
+			<li><a href="#" onclick="createPasswordBox()">패스워드 박스 생성</a></li>
+		</ul>
+	</div>
+	<div id="result">
+	
+	</div>
+	<script>
+/*  
+ * 특정 요소를 찾아서 요소안에 input-text 인 박스 추가
+ */	
+
+		function createTextBox() {
+			var div = document.createElement("div");
+			var input = document.createElement("input");
+			input.setAttribute("type", "text");
+			div.append(input);
+			
+			var result = document.getElementById("result");
+			result.append(div);
+		}
+		function createPasswordBox() {
+			var div = document.createElement("div");
+			div.innerHTML = '<input type="password" />';
+			
+			var result = document.getElementById("result");
+			result.append(div);
+		}
+	</script>
+</body>
+</html>

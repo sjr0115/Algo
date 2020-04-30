@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		/*
+		js에서는 함수도 객체
+		1급 객체: js의 함수
+		*/
+		//1. 변수에 함수 할당
+		var f1 = function() {
+			alert("hi~~~");
+		}
+		f1();
+		
+		//2. parameter로도 함수 사용 가능
+		function test(abc) {
+			abc();
+		}
+		
+		function go(){
+			
+		}
+		
+		test(f1);
+		test(go);
+		
+		//3. return 값으로도 함수 사용 가능
+		function test2(num){
+			num++;
+			
+			return function(){
+				alert("hi" + num);
+			}
+		}
+		
+		var result = test2(33);
+		result();
+		
+		test2(55);
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

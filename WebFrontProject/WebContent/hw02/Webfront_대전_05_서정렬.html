@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+	body {
+		margin: 0 auto;
+		background-color: #DCDCDC;
+		text-align: center;
+		width: 800px;
+		height: 400px;
+	}
+	
+	div input {
+		margin: 30px;
+		width: 100px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: italic bold;
+		position: relative;
+		border: 1px solid black;
+		background-color: #FFFFFF;
+	}
+	
+	div h1 {
+		display: inline;
+	}
+	
+	#menuSelect img{
+		width: 300px;
+		height: 200px;
+		margin: 20px;
+	}
+	
+	#image img {
+		width: 150px;
+		height: 100px;
+		margin: 20px;
+		display: inline;
+		opacity : 0.2;
+		
+	}
+	</style>
+</head>
+<body onload = "createRandomBox()">
+	<div id = "container">
+		<input type="button" onclick="createRandomBox();" value="랜덤 선택" style="color:gray" onmousedown="mouseDown(this)" onmouseup="mouseUp(this)">
+	</div>
+	<div>
+		<h1>오늘의 메뉴: </h1><h1 id = "menuName">케이크</h1>
+	</div>
+	<div id = "menuSelect">
+		<img src = "cake.jpg" id = "result"><br>
+	</div>
+	<div id = "image">
+		<img src = "cake.jpg" alt = "img1" onmouseover = "mOver(this)" onmouseout = "mOut(this)" onclick = "mClick(this)">
+		<img src = "burger.jpg" alt = "img2" onmouseover = "mOver(this)" onmouseout = "mOut(this)" onclick = "mClick(this)">
+		<img src = "steak.jpg" alt = "img3" onmouseover = "mOver(this)" onmouseout = "mOut(this)" onclick = "mClick(this)">
+		<img src = "sandwich.jpg" alt = "img4" onmouseover = "mOver(this)" onmouseout = "mOut(this)" onclick = "mClick(this)">
+	</div>
+	
+	
+	<script>
+		var imgArr = new Array();
+		imgArr[0] = "cake.jpg";
+		imgArr[1] = "burger.jpg";
+		imgArr[2] = "steak.jpg";
+		imgArr[3] = "sandwich.jpg";
+		
+		function createRandomBox() {
+			var imgRandom = Math.round(Math.random() * 3);
+			var imgs = document.getElementById("result").src;
+			imgs.src = imgArr[imgRandom];
+			var menu= "";
+			if(imgRandom == 0) {
+				imgs = "cake.jpg";
+				menu = "케이크";
+			} else if(imgRandom == 1){
+				imgs = "burger.jpg";
+				menu = "햄버거";
+			} else if(imgRandom == 2) {
+				imgs = "steak.jpg";
+				menu = "스테이크";
+			} else if(imgRandom == 3) {
+				imgs = "sandwich.jpg";
+				menu = "샌드위치";
+			}
+			document.getElementById("result").src = imgs;
+			document.getElementById("menuName").innerHTML = menu;
+		}
+		
+		function mouseDown(obj){
+			obj.style.backgroundColor = "#000000";
+		}
+		
+		function mouseUp(obj) {
+			obj.style.backgroundColor = "#FFFFFF";
+		}
+		
+		function mOver(obj) {
+			obj.style.opacity = "1";
+			obj.style.border = "3px solid black";
+		}
+		
+		function mOut(obj) {
+			obj.style.opacity = "0.2";
+		}
+		
+		function mClick(obj) {
+			console.log(obj);
+			
+			var imgs = "";
+			var menu= "";
+			
+			if(obj.alt == "img1") {
+				imgs = "cake.jpg";
+				menu = "케이크";
+			} else if(obj.alt == "img2"){
+				imgs = "burger.jpg";
+				menu = "햄버거";
+			} else if(obj.alt == "img3") {
+				imgs = "steak.jpg";
+				menu = "스테이크";
+			} else if(obj.alt == "img4") {
+				imgs = "sandwich.jpg";
+				menu = "샌드위치";
+			}
+			
+			document.getElementById("result").src = imgs;
+			document.getElementById("menuName").innerHTML = menu;
+		}
+	</script>
+</body>
+</html>

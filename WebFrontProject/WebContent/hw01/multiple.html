@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			table, td{text-align: center; border: 1px solid black;}
+			td{font-size: 11px;}
+		</style>
+		<script type="text/javascript">
+			var result = "<table>";
+			for (var i = 1; i <= 9; i++) {
+				result += "<tr><td align = center bgcolor='green' valign = 'middle'>"
+						+ (i + "단") + "</td>";
+				for (var j = 1; j <= 9; j++) {
+					result += "<font color=black>";
+					result += "<td height = 30 valign = middle>";
+					
+					result += i + " * " + j + " = ";
+					result += (i * j) + "<br>";
+					result += "</font></td>";
+				}
+				result += "</tr>";
+			}
+			
+			result += "</table>";
+			document.writeln(result);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
