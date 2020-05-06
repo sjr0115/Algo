@@ -3,7 +3,7 @@ package 알골강의;
 import java.io.*;
 import java.util.*;
 
-public class Solution_d4_4366_정식이의은행업무 {
+public class Solution_d4_4366_정식이의은행업무 {
     public static void main(String[] args) throws Exception {
     	Scanner sc=new Scanner(System.in);
         int T=sc.nextInt();

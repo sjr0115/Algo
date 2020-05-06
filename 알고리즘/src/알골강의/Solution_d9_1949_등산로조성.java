@@ -3,7 +3,7 @@ package 알골강의;
 import java.io.*;
 import java.util.*;
 
-public class Solution_d9_1949_등산로조성 {   
+public class Solution_d9_1949_등산로조성 {   
 	static int[] di={-1,1,0,0};//상하좌우
 	static int[] dj={0,0,-1,1};
 	static int N,K,max;

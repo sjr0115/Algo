@@ -17,11 +17,11 @@ public class 동전거스름돈구하기_dp {
 		System.out.println(Arrays.toString(memo));
 		
 //		1원, 4원 동전을 모두 고려
-		for (int i = 4; i < memo.length; i++) {
+		for (int i = 400; i < memo.length; i++) {
 //			memo[i]: 1원짜리 동전만 고려한 최소개수
 //			memo[i - 4]: 4원짜리 동전만 고려한 최소개수
-			if(memo[i] > memo[i - 4] + 1) {
-				memo[i] = memo[i - 4] + 1;
+			if(memo[i] > memo[i - 400] + 1) {
+				memo[i] = memo[i - 400] + 1;
 			}
 		}
 		System.out.println(Arrays.toString(memo));

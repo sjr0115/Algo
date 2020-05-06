@@ -3,7 +3,7 @@ package 알골강의;
 import java.io.*;
 import java.util.*;
 
-public class Main_bj_15686_치킨배달{
+public class Main_bj_15686_치킨배달{
 	public static int N,M,min=987654321;
 	public static List<int[]> home,chicken,choice;
 	 	 
