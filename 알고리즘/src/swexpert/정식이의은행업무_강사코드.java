@@ -2,7 +2,7 @@ package swexpert;
 import java.io.*;
 import java.util.*;
 
-public class 정식이의은행업무_강사코드 {
+public class 정식이의은행업무_강사코드 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
